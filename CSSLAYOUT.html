@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            justify-content: space-around;
+            display: flex;
+            padding: 10px;
+        }
+
+        .navbar a {
+            color: #00C3A5;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .footer {}
+
+        p {
+            color: #00C3A5;
+        }
+        .spp
+        {
+            color: white;
+            text-align: left;
+        }
+
+        .more {
+            display: flex;
+            justify-content: center;
+            color: #00b39b;
+            font-size: 20px;
+            font-family: Work Sans, Arial, sans-serif;
+            font-weight: 300;
+            letter-spacing: -0.3px;
+        }
+
+        .paragraphs {
+            color: #747474;
+            font-size: 16px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            padding-left: 10px; /* Adjust the left padding */
+            padding-right: 10px; /* Adjust the right padding */
+            width: 100%;
+        }
+
+        .fp, .sp {
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        .sp {
+            margin-left: 80px; /* Adjust the left margin for moderate spacing */
+        }
+        .object
+        {
+
+            
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 1.375em 1.25em 0;
+  font-size: 1.5em;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 3.75rem auto 2.5rem;
+  color: #fff;
+  font-family: Work Sans, Arial, sans-serif;
+  max-width: 1015px;
+  padding: 0 20px;
+  position: relative;
+
+        }
+
+        .white-container {
+            background-color: #fff;
+            display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 1.375em 1.25em 0;
+  font-size: 1.5em;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 3.75rem auto 2.5rem;
+  color: #fff;
+  font-family: Work Sans, Arial, sans-serif;
+  max-width: 1015px;
+  padding: 0 20px;
+  position: relative;
+        }
+
+        .round-container {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            background-color: #00C3A5;
+            border-radius: 10px;
+        }
+
+        .round-container1 {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            background-color: rgb(61, 131, 223);
+            border-radius: 10px;
+        }
+        .round-container2 {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            background-color: black;
+            border-radius: 10px;
+        }
+
+        .content {
+            text-align: left;
+            padding: 20px;
+            color: white;
+        }
+
+        .custom-select {
+            display: none;
+        }
+
+        .custom-select.active {
+            display: block;
+        }
+        .title{ 
+            font-size: 1.625em;
+            font-weight: 400;
+            color: #fff;
+            margin: 0.3em 0;
+            font-family: Work Sans, Arial, sans-serif;
+        }
+
+
+
+    /* Existing CSS rules... */
+
+    /* Style for the first rounded container */
+    .round-container select {
+        background-color: #00C3A5; /* Match the first rounded container's color */
+        color: white;
+        border: none;
+        padding: 10px;
+    }
+
+    /* Style for the second rounded container */
+    .round-container1 select {
+        background-color: rgb(61, 131, 223); /* Match the second rounded container's color */
+        color: white;
+        border: none;
+        padding: 10px;
+    }
+
+    /* Style for the third rounded container */
+    .round-container2 select {
+        background-color: black; /* Match the third rounded container's color */
+        color: white;
+        border: none;
+        padding: 10px;
+    }
+
+/* Adjust the position and spacing of select containers in the third round container */
+.round-container2 .select-container {
+    margin-bottom: 30px; /* Add space between select containers */
+    margin-top: -20px; /* Move the select container upwards (adjust as needed) */
+}
+
+
+
+
+
+
+
+    .plogo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+     
+    }
+
+    .logop {
+        margin-left: 350px;
+        width: auto;
+        margin-top: -100px;
+    }
+
+    .tlogo {
+        width: 50%; 
+        margin-top: -30px;
+     
+    }
+    .tablel {
+        border-collapse: separate;
+        border-spacing: 20px; 
+        table-layout: fixed;
+        width: 60%;
+    }
+
+    .tablel {
+        padding: 10px; 
+    }
+    tablel td, tablel th {
+    padding: 10px; /* Adjust cell padding (if needed) */
+ 
+}
+    .logo-image {
+        width: 80px;
+        object-fit: contain;
+    }
+
+.biglogo
+{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 55px;
+  background-color: #d0faf4;
+  padding-left: 50px;
+}
+
+.section4header {
+  font-family: Work Sans, Arial, sans-serif;
+  padding-top: 60px;
+}
+.section4header h2 {
+  color: #00b39b;
+  font-weight: 300;
+  letter-spacing: -0.3px;
+  padding-left: 50px;
+}
+.section4header p {
+  padding-left: 50px;
+  padding-top: 20px;
+  font-size: 15px;
+  color: #747474;
+  padding-bottom: 50px;
+}
+.first2 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+.second2 {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.section4fourparts {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 100px;
+}
+
+.section4fourparts h3, .bphoto h3 {
+  font-size: 29.6px;
+  color: #00b39b;
+  font-family: 'Work Sans', Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: -0.3px;
+}
+
+.section4fourparts p, .bphoto p {
+  font-size: 13px; 
+  font-weight: 400;
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #747474;
+}
+
+#leader, #patients, #appointments, #doctors {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  text-align: center;
+  width: 220px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+
+#leader img, #patients img, #appointments img, #doctors img {
+  width: 25px;
+  height: auto;
+}
+
+.section4fourparts .item, .bphoto {
+  height: 500px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 50px;
+}
+
+
+.bphoto h3 {
+  font-size: 30.4px; 
+  letter-spacing: -0.5px;
+  text-align: center;
+}
+
+.bphoto p {
+  margin: 25.6px 0; 
+  line-height: 24px; 
+  text-align: center;
+}
+table.table1 { /* Changed the class name to "table1" */
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table1 td { /* Updated the class selector */
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .table1 img { /* Updated the class selector */
+            max-width: 100%;
+            height: auto;
+        }
+
+        .table1 .button { /* Updated the class selector */
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .table1 .text-and-button { /* Updated the class selector */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .table1 .button { /* Updated the class selector */
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            background: #3d83df;
+            line-height: 1em;
+            color: #fff;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+            text-align: center;
+            outline: 0;
+            border: 0;
+            border-radius: 4px;
+            font-size: 16px;
+            font-family: Roboto, Arial, sans-serif;
+            margin-right: 20px;
+            align-items: center;
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+
+        .table1 .centered-cell { /* Updated the class selector */
+            text-align: center;
+        }
+
+            .end{
+   
+            text-align: center;
+            margin-top: 100px;
+            font-size: 12px;
+            font-family: Roboto, Arial, sans-serif;
+            color: #ababab;
+            padding-left: 100px;
+            padding-right: 100px;
+           
+        }
+                .end p {
+                padding-top: 20px;
+                }
+                .bphoto {
+                    display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 70px;
+  width: 100%
+}
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <a href="CSSLAYOUT.html"><img src="https://docplanner-gomycode.onrender.com/logos/FullLogo.png"
+                    style="width: 280px; height: 40px;"></a>
+        </div>
+        <div class="navbar">
+            <a id="About" href="CSSLAYOUT.html">About us</a>
+            <a href="#" id="Career">Career</a>
+            <a href="#" id="Departments">Departments</a>
+        </div>
+    </header>
+
+    <div style="display: flex; justify-content: center;">
+        <img src="https://docplanner-gomycode.onrender.com/logos/logo.png" alt="logo" style="width: 50px; height: 50px;">
+    </div>
+
+    <div class="more">
+        <p>Making the healthcare experience more human</p>
+    </div>
+
+    <div class="paragraphs">
+        <div class="fp">
+            <p style="color: #747474;">
+                We want patients to find the perfect doctor and book an appointment in <br> the most easy way. The patient journey should be enjoyable, and that's <br> why we are always next to them:
+                to help them find the best possible care  . 
+                <br> Anytime, anywhere.
+            </p>
+        </div>
+        <div class="sp">
+            <p style="color: #747474;">
+                We also help doctors to better manage their practice and build their online <br> reputation. With our integrated end-to-end solution, doctors are able not only <br> to improve their online presence, but also to devote their time to what really <br> matters:
+                their patients.
+            </p>
+        </div>
+    </div>
+    <div class="white-container">
+        <div class="round-container">
+            <div class="content">
+                <img src="https://docplanner-gomycode.onrender.com/Images/icon-patients.svg" alt="patients">
+                <p class="title">For patients</p>
+                <p style="font-size: 21px; font-weight: 300; font-family: sans-serif, Arial;" class="spp">Find a doctor, book a visit, and solve any health-related doubt</p>
+                <div >
+                    <select>
+                        <option>Choose country</option>
+                        <option value="#">Argentina</option>
+                        <option value="#">Brazil</option>
+                        <option value="#">Chile</option>
+                        <option value="#">Colombia</option>
+                        <option value="#">Czech</option>
+                        <option value="#">Germany</option>
+                        <option value="#">Italy</option>
+                        <option value="#">Mexico</option>
+                        <option value="#">Peru</option>
+                        <option value="#">Poland</option>
+                        <option value="#">PortUgal</option>
+                        <option value="#">Spain</option>
+                        <option value="#">Turkey</option>
+                      </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="round-container1">
+            <div class="content">
+                <img src="https://docplanner-gomycode.onrender.com/Images/icon-doctors.svg" alt="doctors">
+                <p class="title">For doctors</p>
+                <p style="font-size: 21px; font-weight: 300; font-family: sans-serif, Arial;" class="spp">Save time managing visits and cut no-shows by half</p>
+                <div >
+                    <select>
+                        <option>Choose country</option>
+                        <option value="#">Argentina</option>
+                        <option value="#">Brazil</option>
+                        <option value="#">Chile</option>
+                        <option value="#">Colombia</option>
+                        <option value="#">Czech</option>
+                        <option value="#">Germany</option>
+                        <option value="#">Italy</option>
+                        <option value="#">Mexico</option>
+                        <option value="#">Peru</option>
+                        <option value="#">Poland</option>
+                        <option value="#">PortUgal</option>
+                        <option value="#">Spain</option>
+                        <option value="#">Turkey</option>
+                      </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="round-container2">
+            <div class="content">
+                  <img src="https://docplanner-gomycode.onrender.com/Images/icon-clinics.svg" alt="doctor" />
+                  <p class="title">For clinics</p>
+                  <p style="font-size: 21px; font-weight: 300; font-family: sans-serif, Arial;" class="spp">Deliver an exceptional patient experience in your clinic</p>
+                
+                <div id="select">
+                    <div class="select-container">
+                        <select>
+                          <option>2 to 20 specialists</option>
+                          <option value="#">Brazil</option>
+                          <option value="#">Czech</option>
+                          <option value="#">Italy</option>
+                          <option value="#">Mexico</option>
+                          <option value="#">Poland</option>
+                          <option value="#">Spain</option>
+                          <option value="#">Turkey</option>
+                        </select>
+                      </div>
+                      
+                      <div class="select-container">
+                        <select>
+                          <option>More than 20 specialists</option>
+                          <option value="#">Brazil</option>
+                          <option value="#">Italy</option>
+                          <option value="#">Mexico</option>
+                          <option value="#">Poland</option>
+                          <option value="#">Spain</option>
+                        </select>
+                      </div>
+                      
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="plogo">
+  <div>
+    <p style="font-size: 22px; " class="logop">
+        We are a global <br />company<br />
+        with local culture
+      </p>
+    </div>
+    <div class="tlogo">
+        <table class="tablel">
+            <tr>
+                <td><img src="https://docplanner-gomycode.onrender.com/Countrylogos/znanylekarz.png" alt="znanylekarz" class="logo-image" /></td>
+                <td><img src="https://docplanner-gomycode.onrender.com/Countrylogos/Doctoralia.png" alt="Doctoralia" class="logo-image" /></td>
+                <td><img src="https://docplanner-gomycode.onrender.com/Countrylogos/MioDottore.png" alt="MioDottore" class="logo-image" /></td>
+                <td><img src="https://docplanner-gomycode.onrender.com/Countrylogos/doktortakvimi.png" alt="doktortakvimi" class="logo-image" /></td>
+            </tr>
+            <tr>
+                <td><img src="https://docplanner-gomycode.onrender.com/Countrylogos/Znamylekar.jpg" alt="Znamylekar" class="logo-image" /></td>
+                <td><img src="https://docplanner-gomycode.onrender.com/Countrylogos/logo-jameda.svg" alt="jameda" class="logo-image" /></td>
+                <td><img src="https://docplanner-gomycode.onrender.com/Countrylogos/logo-tuotempo.svg" alt="tuotempo" class="logo-image" /></td>
+                <td><img src="https://docplanner-gomycode.onrender.com/Countrylogos/logo-gipo-primary.svg" alt="gipo" class="logo-image" /></td>
+            </tr>
+            <tr>
+                <td><img src="https://docplanner-gomycode.onrender.com/Countrylogos/logo-clinicloud.svg" alt="clinicloud" class="logo-image" /></td>
+                <td><img src="https://docplanner-gomycode.onrender.com/Countrylogos/logo-feegow.svg" alt="feegow" class="logo-image" /></td>
+            </tr>
+        </table>
+    </div>
+    </div>
+    <div class="biglogo">
+        <div class="pblogo">
+            <h2>The world's biggest</br> healthcare platform</h2>
+            <p>We work from 9 offices all over the world, bringing Docplanner</br> Group to life in 13 countries.</p>
+            <img src="https://docplanner-gomycode.onrender.com/logos/logocropped.png" alt="background logo"/>
+          </div>
+          <div class="section4fourparts">
+            <div class="first2">
+              <div id="leader">
+                  <img src="https://docplanner-gomycode.onrender.com/img/flag.png" alt="flag"/>
+                  <h3>Leader in 13 countries</h3>
+                 <p>Poland, Brazil, Mexico, Spain, Italy, Germany, Turkey, Colombia, Czech Republic, Portugal, Argentina, Peru and Chile</p>
+              </div>
+             <div id="patients">
+                <img src="https://docplanner-gomycode.onrender.com/img/patients.png" alt="patients"/>
+                <h3>90,000,000 patients</h3>
+                <p>visit our websites each month</p>
+              </div>
+            </div>
+            <div class="second2">
+              <div id="appointments">
+                  <img src="https://docplanner-gomycode.onrender.com/img/visits.png" alt="visits"/>
+                  <h3>15,000,000 appointments</h3>
+                  <p>booked last month</p>
+              </div>
+              <div id="doctors">
+                <img src="https://docplanner-gomycode.onrender.com/img/doctors.png" alt="doctor"/>
+                <h3>210,000 active doctors</h3>
+                <p>trust our solutions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="bphoto">
+           
+                <h3 id>Improve the lives of millions.<br>Change yours forever.</h3>
+                <p id>More than 2800 team mates share our same vision, goals and passion.<br> With offices in Warsaw, Barcelona, Munich, Istanbul, Rome, Rio, Bologna,<br> Mexico City and Curitiba, our search for great talent never stops.</p>
+              
+          </div>
+          <table class="table1"> 
+            <tr>
+                <td>
+                    <img src="https://docplanner-gomycode.onrender.com/country%20img/warsaw.png" alt="Image 1">
+                    <div class="text-and-button">
+                        <div>Word 1</div>
+                        <a class="button" href="#">Button 1</a>
+                    </div>
+                </td>
+                <td>
+                    <img src="https://docplanner-gomycode.onrender.com/country%20img/barcelona.png" alt="Image 2">
+                    <div class="text-and-button">
+                        <div>Word 2</div>
+                        <a class="button" href="#">Button 2</a>
+                    </div>
+                </td>
+                <td>
+                    <img src="https://docplanner-gomycode.onrender.com/country%20img/munich.png" alt="Image 3">
+                    <div class="text-and-button">
+                        <div>Word 3</div>
+                        <a class="button" href="#">Button 3</a>
+                    </div>
+                </td>
+                <td>
+                    <img src="https://docplanner-gomycode.onrender.com/country%20img/istanbul.png" alt="Image 4">
+                    <div class="text-and-button">
+                        <div>Word 4</div>
+                        <a class="button" href="#">Button 4</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="https://docplanner-gomycode.onrender.com/country%20img/rome.png" alt="Image 5">
+                    <div class="text-and-button">
+                        <div>Word 5</div>
+                        <a class="button" href="#">Button 5</a>
+                    </div>
+                </td>
+                <td>
+                    <img src="https://docplanner-gomycode.onrender.com/country%20img/bologna.png" alt="Image 6">
+                    <div class="text-and-button">
+                        <div>Word 6</div>
+                        <a class="button" href="#">Button 6</a>
+                    </div>
+                </td>
+                <td>
+                    <img src="https://docplanner-gomycode.onrender.com/country%20img/curitiba.png" alt="Image 7">
+                    <div class="text-and-button">
+                        <div>Word 7</div>
+                        <a class="button" href="#">Button 7</a>
+                    </div>
+                </td>
+                <td>
+                    <img src="https://docplanner-gomycode.onrender.com/country%20img/rio-janeiro.png" alt="Image 8">
+                    <div class="text-and-button">
+                        <div>Word 8</div>
+                        <a class="button" href="#">Button 8</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td class="centered-cell">
+                    <img src="https://docplanner-gomycode.onrender.com/country%20img/mexico-city.png" alt="Centered Image">
+                    <div class="text-and-button">
+                        <div>Word 8</div>
+                        <a class="button" href="#">Button 8</a>
+                    </div>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+
+    <footer >
+
+        <div class="end">
+            We are leaders in 13 countries:
+            <a href="#">Poland</a>
+            ,
+            <a href="#">Turky</a>
+            ,
+            <a href="#">Spain</a>
+            ,
+            <a href="#">Italy</a>
+            ,
+            <a href="#">Germany</a>
+            ,
+            <a href="#">Czech Republic</a>
+            ,
+            <a href="#">Portugal</a>
+            ,
+            <a href="#">Mexico</a>
+            ,
+            <a href="#">Colombia</a>
+            ,
+            <a href="#">Brazil</a>
+            ,
+            <a href="#">Argentina</a>
+            ,
+            <a href="#">Peru</a>
+            and
+            <a href="#">Chile</a>
+            <p>This site uses cookies to deliver services in accordance with this Privacy Policy. You can specify the conditions for storing or accessing cookies on your browser.
+            <br>www.docplanner.com © 2023</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
