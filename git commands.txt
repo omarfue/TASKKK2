@@ -1,0 +1,79 @@
+
+omar@OMAR MINGW64 ~/OneDrive - Future uiversity/Pictures/Screenshots/TASK2 (master)
+$ ^[[200~git init
+bash: $'\E[200~git': command not found
+
+omar@OMAR MINGW64 ~/OneDrive - Future uiversity/Pictures/Screenshots/TASK2 (master)
+$ git init
+Initialized empty Git repository in C:/Users/omar/OneDrive - Future uiversity/Pictures/Screenshots/TASK2/.git/
+
+omar@OMAR MINGW64 ~/OneDrive - Future uiversity/Pictures/Screenshots/TASK2 (master)
+$ git add .
+
+omar@OMAR MINGW64 ~/OneDrive - Future uiversity/Pictures/Screenshots/TASK2 (master)
+$ git commit -m "Initial commit"
+[master (root-commit) 7ccddf2] Initial commit
+ 1 file changed, 707 insertions(+)
+ create mode 100644 CSSLAYOUT.html
+
+omar@OMAR MINGW64 ~/OneDrive - Future uiversity/Pictures/Screenshots/TASK2 (master)
+$ git log
+commit 7ccddf225748e923fe46d4fc1bdd7437f33834b2 (HEAD -> master)
+Author: omarfue <74133483+omarfue@users.noreply.github.com>
+Date:   Sun Oct 29 13:14:35 2023 +0200
+
+    Initial commit
+
+omar@OMAR MINGW64 ~/OneDrive - Future uiversity/Pictures/Screenshots/TASK2 (master)
+$ git remote add origin https://github.com/omarfue/TASKKK2.git
+
+omar@OMAR MINGW64 ~/OneDrive - Future uiversity/Pictures/Screenshots/TASK2 (master)
+$ ^[[200~git push -u origin main
+bash: $'\E[200~git': command not found
+
+omar@OMAR MINGW64 ~/OneDrive - Future uiversity/Pictures/Screenshots/TASK2 (master)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/omarfue/TASKKK2.git'
+
+omar@OMAR MINGW64 ~/OneDrive - Future uiversity/Pictures/Screenshots/TASK2 (master)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/omarfue/TASKKK2.git'
+
+omar@OMAR MINGW64 ~/OneDrive - Future uiversity/Pictures/Screenshots/TASK2 (master)
+$ ^C
+
+omar@OMAR MINGW64 ~/OneDrive - Future uiversity/Pictures/Screenshots/TASK2 (master)
+$ git branch
+* master
+
+omar@OMAR MINGW64 ~/OneDrive - Future uiversity/Pictures/Screenshots/TASK2 (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 4.32 KiB | 4.32 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/omarfue/TASKKK2.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+omar@OMAR MINGW64 ~/OneDrive - Future uiversity/Pictures/Screenshots/TASK2 (master)
+$ git branch -m master main
+
+
+omar@OMAR MINGW64 ~/OneDrive - Future uiversity/Pictures/Screenshots/TASK2 (main)
+$ git push -u origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'main' on GitHub by visiting:
+remote:      https://github.com/omarfue/TASKKK2/pull/new/main
+remote:
+To https://github.com/omarfue/TASKKK2.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+omar@OMAR MINGW64 ~/OneDrive - Future uiversity/Pictures/Screenshots/TASK2 (main)
+$
